@@ -7,7 +7,7 @@ Steps to Setup Project
 Pre requisites: 
 1.	Eclipse is available (latest Version)
 2.	TestNG is installed in Eclipse 
-3.	Java Latest version ( You can update the java version in POM if you want to change it)
+3.	Java 1.8 version ( You can update the java version in POM if you want to change it)
 4.	Git is installed in your system
 
 Steps:
