@@ -53,7 +53,7 @@ public class JavaBase {
 		
 		
 		//System.setProperty("webdriver.chrome.driver", "D://chromedriver_win32//chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "C://Users//DiptmanGupta//Desktop//Practice//TestingProject//Configuration//ChromeDriver//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", this.getClass().getClassLoader().getResource("chromedriver.exe").getPath().substring(1));
 		
 		
 		driver = new ChromeDriver();
