@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="First Suite" duration-ms="38335" started-at="2015-06-13T04:55:59Z" finished-at="2015-06-13T04:56:37Z">
+  <suite name="Default suite" duration-ms="21921" started-at="2015-06-15T06:57:32Z" finished-at="2015-06-15T06:57:54Z">
     <groups>
     </groups>
-    <test name="First Test" duration-ms="38335" started-at="2015-06-13T04:55:59Z" finished-at="2015-06-13T04:56:37Z">
+    <test name="Default test" duration-ms="21921" started-at="2015-06-15T06:57:32Z" finished-at="2015-06-15T06:57:54Z">
       <class name="com.deep.testCase.Mail">
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.deep.testCase.Mail@11531931]" name="loadConfig" is-config="true" duration-ms="15968" started-at="2015-06-13T10:25:59Z" finished-at="2015-06-13T10:26:15Z">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.deep.testCase.Mail@6ea6d14e]" name="loadConfig" is-config="true" duration-ms="2833" started-at="2015-06-15T12:27:32Z" finished-at="2015-06-15T12:27:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="loginmail()[pri:0, instance:com.deep.testCase.Mail@11531931]" name="loginmail" duration-ms="22287" started-at="2015-06-13T10:26:15Z" finished-at="2015-06-13T10:26:37Z">
+        <test-method status="PASS" signature="loginmail()[pri:0, instance:com.deep.testCase.Mail@6ea6d14e]" name="loginmail" duration-ms="19075" started-at="2015-06-15T12:27:35Z" finished-at="2015-06-15T12:27:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginmail -->
       </class> <!-- com.deep.testCase.Mail -->
-    </test> <!-- First Test -->
-  </suite> <!-- First Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

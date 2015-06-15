@@ -13,7 +13,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-
 /**
  * @author DiptmanG
  *
@@ -31,8 +30,9 @@ public class JavaBase {
 
 		if (driver == null) {
 			CONFIGPROP = new Properties();
-			
-			CONFIGPROP.load(JavaBase.class.getClassLoader().getResourceAsStream("config.properties"));
+
+			CONFIGPROP.load(JavaBase.class.getClassLoader()
+					.getResourceAsStream("config.properties"));
 
 			XPATHPROP = new Properties();
 			XPATHPROP.load(JavaBase.class.getClassLoader().getResourceAsStream(
@@ -41,34 +41,33 @@ public class JavaBase {
 
 		// initialize browser web driver
 
-		if (CONFIGPROP.getProperty("Browser").equalsIgnoreCase("Mozilla"))
-		{
+		if (CONFIGPROP.getProperty("Browser").equalsIgnoreCase("Mozilla")) {
 			driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		} else if (CONFIGPROP.getProperty("Browser").equalsIgnoreCase("Chrome")) {
+			// System.setProperty("webdriver.chrome.driver",
+			// "/path/to/chromedriver");
+
+			System.setProperty("webdriver.chrome.driver", this.getClass()
+					.getClassLoader().getResource("chromedriver.exe").getPath()
+					.substring(1));
+
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}
-	else if (CONFIGPROP.getProperty("Browser").equalsIgnoreCase("Chrome"))
-	{
-		//System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
-		
-		
-		//System.setProperty("webdriver.chrome.driver", "D://chromedriver_win32//chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", this.getClass().getClassLoader().getResource("chromedriver.exe").getPath().substring(1));
-		
-		
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
-		}
-		// get object defination 
+
+	// get object defination
 	public static WebElement getObject(String xpathKey) {
 		try {
-			return driver.findElement(By.xpath(XPATHPROP.getProperty(xpathKey)));
+			return driver
+					.findElement(By.xpath(XPATHPROP.getProperty(xpathKey)));
 		} catch (Throwable t) {
 			t.printStackTrace();
 			return null;
 		}
 	}
 
-	}
+}

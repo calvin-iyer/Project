@@ -15,27 +15,24 @@ import com.deep.configuration.JavaBase;
  */
 public class Mail extends JavaBase {
 
-@BeforeTest
+	@BeforeTest
 	public void loadConfig() throws IOException {
 		Initialize();
 	}
-	
-@Test
-	public void loginmail(){
-		
+
+	@Test
+	public void loginmail() {
+
 		driver.get(CONFIGPROP.getProperty("SiteName"));
-		
+
 		Common common = new Common();
 		try {
 			common.login();
-			
-		//	common.logout();
-			
-			
+
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }
