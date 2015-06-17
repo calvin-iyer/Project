@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 /**
  * @author DiptmanG
@@ -55,6 +56,10 @@ public class JavaBase {
 
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		} else if (CONFIGPROP.getProperty("Browser").equalsIgnoreCase(
+				"htmlunit")) {
+			driver = new HtmlUnitDriver();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}
 	}

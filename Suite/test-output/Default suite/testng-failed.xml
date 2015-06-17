@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.deep.testCase.Mail">
+      <class name="com.deep.testCase.LoginFb">
         <methods>
           <include name="loginmail"/>
           <include name="loadConfig"/>
         </methods>
-      </class> <!-- com.deep.testCase.Mail -->
+      </class> <!-- com.deep.testCase.LoginFb -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

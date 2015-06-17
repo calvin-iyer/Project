@@ -13,7 +13,7 @@ import com.deep.configuration.JavaBase;
  * @author DiptmanG
  *
  */
-public class Mail extends JavaBase {
+public class LoginFb extends JavaBase {
 
 	@BeforeTest
 	public void loadConfig() throws IOException {

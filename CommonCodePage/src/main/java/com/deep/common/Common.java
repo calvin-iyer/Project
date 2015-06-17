@@ -16,13 +16,11 @@ public class Common extends JavaBase {
 		String password = CONFIGPROP.getProperty("password");
 		Thread.sleep(5000);
 		getObject("username_input").sendKeys(username);
-		getObject("Next_button").click();
 		Thread.sleep(5000);
 		getObject("password_input").sendKeys(password);
-
-		getObject("login_button").click();
-		Thread.sleep(5000);
-		getObject("login_button").click();
+		
+		getObject("login_button").submit();
+	
 	}
 }
 
