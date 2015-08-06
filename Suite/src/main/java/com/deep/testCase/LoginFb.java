@@ -4,8 +4,10 @@
 package com.deep.testCase;
 
 import java.io.IOException;
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import com.deep.common.Common;
 import com.deep.configuration.JavaBase;
 
@@ -21,7 +23,7 @@ public class LoginFb extends JavaBase {
 	}
 
 	@Test
-	public void loginmail() {
+	public void loginmail() throws Exception {
 
 		driver.get(CONFIGPROP.getProperty("SiteName"));
 
