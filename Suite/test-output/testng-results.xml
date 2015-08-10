@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22316" started-at="2015-08-06T02:59:35Z" finished-at="2015-08-06T02:59:57Z">
+  <suite name="First Suite" duration-ms="39498" started-at="2015-08-10T12:26:16Z" finished-at="2015-08-10T12:26:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22316" started-at="2015-08-06T02:59:35Z" finished-at="2015-08-06T02:59:57Z">
+    <test name="First Test" duration-ms="21727" started-at="2015-08-10T12:26:16Z" finished-at="2015-08-10T12:26:38Z">
       <class name="com.deep.testCase.LoginFb">
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.deep.testCase.LoginFb@35bbe5e8]" name="loadConfig" is-config="true" duration-ms="8052" started-at="2015-08-06T08:29:35Z" finished-at="2015-08-06T08:29:43Z">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.deep.testCase.LoginFb@35bbe5e8]" name="loadConfig" is-config="true" duration-ms="6350" started-at="2015-08-10T17:56:16Z" finished-at="2015-08-10T17:56:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="loginmail()[pri:0, instance:com.deep.testCase.LoginFb@35bbe5e8]" name="loginmail" duration-ms="14245" started-at="2015-08-06T08:29:43Z" finished-at="2015-08-06T08:29:57Z">
+        <test-method status="PASS" signature="loginmail()[pri:0, instance:com.deep.testCase.LoginFb@35bbe5e8]" name="loginmail" duration-ms="15369" started-at="2015-08-10T17:56:22Z" finished-at="2015-08-10T17:56:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginmail -->
       </class> <!-- com.deep.testCase.LoginFb -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- First Test -->
+    <test name="Second Test" duration-ms="17758" started-at="2015-08-10T12:26:38Z" finished-at="2015-08-10T12:26:55Z">
+      <class name="com.deep.testCase.LoginFb2">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.deep.testCase.LoginFb2@59a6e353]" name="loadConfig" is-config="true" duration-ms="4890" started-at="2015-08-10T17:56:38Z" finished-at="2015-08-10T17:56:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method status="PASS" signature="loginmail()[pri:0, instance:com.deep.testCase.LoginFb2@59a6e353]" name="loginmail" duration-ms="12866" started-at="2015-08-10T17:56:43Z" finished-at="2015-08-10T17:56:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginmail -->
+      </class> <!-- com.deep.testCase.LoginFb2 -->
+    </test> <!-- Second Test -->
+  </suite> <!-- First Suite -->
 </testng-results>

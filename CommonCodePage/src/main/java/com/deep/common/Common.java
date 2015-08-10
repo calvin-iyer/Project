@@ -3,7 +3,7 @@ package com.deep.common;
 import org.testng.annotations.Test;
 
 import com.deep.configuration.JavaBase;
-import com.deep.utility.ExcelUtils;
+
 
 @Test
 public class Common extends JavaBase {
@@ -13,16 +13,13 @@ public class Common extends JavaBase {
 	
 	
 
-	//	String username = CONFIGPROP.getProperty("username");
-		
-		String xusername = ExcelUtils.getCellData(1,1);
-		System.out.println(xusername);
+		String username = CONFIGPROP.getProperty("username");
+		System.out.println(username);
 		String password = CONFIGPROP.getProperty("password");
 		Thread.sleep(5000);
-		getObject("username_input").sendKeys(xusername);
+		getObject("username_input").sendKeys(username);
 		Thread.sleep(5000);
 		getObject("password_input").sendKeys(password);
-		
 		getObject("login_button").submit();
 	
 	}
