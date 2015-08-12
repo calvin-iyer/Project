@@ -5,6 +5,7 @@ package com.deep.testCase;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -30,6 +31,7 @@ public class LoginFb2 extends JavaBase {
 		Common common = new Common();
 		try {
 			common.login();
+			Assert.assertEquals(true, false);
 
 		} catch (InterruptedException e) {
 			e.printStackTrace();

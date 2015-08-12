@@ -30,6 +30,7 @@ public class LoginFb extends JavaBase {
 		Common common = new Common();
 		try {
 			common.login();
+	
 
 		} catch (InterruptedException e) {
 			e.printStackTrace();

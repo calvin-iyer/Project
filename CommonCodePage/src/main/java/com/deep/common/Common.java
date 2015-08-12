@@ -4,14 +4,10 @@ import org.testng.annotations.Test;
 
 import com.deep.configuration.JavaBase;
 
-
 @Test
 public class Common extends JavaBase {
 
 	public void login() throws Exception {
-
-	
-	
 
 		String username = CONFIGPROP.getProperty("username");
 		System.out.println(username);
@@ -20,8 +16,13 @@ public class Common extends JavaBase {
 		getObject("username_input").sendKeys(username);
 		Thread.sleep(5000);
 		getObject("password_input").sendKeys(password);
-		getObject("login_button").submit();
+	//	getObject("login_button").submit();
+	}
+
+	public void logout() {
+		// TODO Auto-generated method stub
+		System.out.println(" Logout from application");
 	
+		
 	}
 }
-
