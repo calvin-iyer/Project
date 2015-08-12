@@ -2,16 +2,13 @@
 package com.deep.IntegrationUtil;
 
 import java.io.File;
-
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.LineIterator;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
@@ -28,13 +25,13 @@ public class TestngUtil {
 		String str;
 		System.out.println(readsource.getInstance().getProperty("firstName"));
 		// change file path
-		String fileData[] = FileUtils.readFileToString(new File("C:\\Users\\diptmang\\Desktop\\testcodes.txt"))
-				.split("\n");
+		LineIterator lineIterator = FileUtils.lineIterator(new File(
+				"C:\\Users\\diptmang\\Desktop\\testcodes.txt"));
 
-		{
-
-			for (String fileLine : fileData) {
-				String lineSplit[] = fileLine.split("=");
+		while (lineIterator.hasNext()) {
+			String line = lineIterator.nextLine();
+			if(!line.isEmpty()) {
+				String lineSplit[] = line.split("=");
 				String testCode = lineSplit[0];
 				String testClasses[] = lineSplit[1].split(",");
 				runAndVerify(testCode, testClasses);
@@ -73,7 +70,7 @@ public class TestngUtil {
 		failedTests.addAll(tla.getConfigurationFailures());
 		// JIRA connections
 		WebClient wc = new WebClient();
-		WebRequest wr = new WebRequest(new URL("http://localhost:8080//rest/api/2/issue/" + testCode + "/transitions"),
+		WebRequest wr = new WebRequest(new URL("http://localhost:8080/rest/api/2/issue/" + testCode + "/transitions"),
 				HttpMethod.POST);
 		Map<String, String> headers = new HashMap<String, String>();
 		// User id password with basic encryption : base 64 fiddler text wizard
